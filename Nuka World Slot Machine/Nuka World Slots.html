@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuka World Slots</title>
+</head>
+<style>
+    .text {font-family: "Brush Script MT"; color: crimson}
+    .lCol {float: left; align-content: center;}
+    .rCol {float: right; align-content: center;}
+</style>
+<body bgcolor="white">
+<form name=slots onsubmit="requirements();return false;">
+    <table align="center">
+        <tr>
+            <td>
+                <img src="Images/Nuka%20World%20Cappy.gif">
+            </td>
+        </tr>
+    </table>
+    <table align="center" style="border-top: double thick white; border-bottom: double thick white">
+        <tr>
+            <td class = "lCol">
+                <table cellpadding="3" cellspacing="1">
+                    <tr>
+                        <td>
+                            <table align="center">
+                                <tr>
+                                    <td class="text" colspan="2" align="center"><h2>Welcome to Nuka World!</h2></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">
+                                        <table align="center">
+                                            <tr><td class="text">1. Place your desired bet in the space provided</td></tr>
+                                            <tr><td class="text">2. Click the "SPIN!" button to start</td></tr>
+                                            <tr><td class="text">3. To restart click the "restart" button</td></tr>
+                                            <tr><td class="text">4. To show your earnings, click the "Show earnings" button</td></tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table> <!-- Instructions -->
+                        </td>
+                    </tr>
+                </table>
+                <table align="center"><!-- input for function result-->
+                    <tr>
+                        <td align="right" class="text">Caps:</td>
+                        <td align=left><input type=text size=10 name=gold value=25 readonly></td>
+                    </tr>
+                    <tr>
+                        <td class="text" align="right">Your bet:</td>
+                        <td align=left><input type=text size=10 name=bet></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input class="text" type=submit value="SPIN!"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input class="text" type=button value="Show Earnings" onclick="result();"></td>
+                    </tr>
+                    <tr><th colspan=2 align="center"> <input class="text" type=reset value="restart game" onclick="refresh()"> </th></tr>
+                </table>
+                <table>
+                    <tr align="center">
+                        <td>
+                            <table align="center" cellspacing="5" cellpadding="2" border="0">
+                                <tr align="center">
+                                    <td><img height="200" width="125" src="Images/Vault.jpg" name="slot1"></td>
+                                    <td><img height="200" width="125" src="Images/Vault.jpg" name="slot2"></td>
+                                    <td><img height="200" width="125" src="Images/Vault.jpg" name="slot3"></td>
+                                </tr>
+                            </table>
+                            <input type="text" size="35" readonly name="banner">
+                        </td>
+                    </tr> <!-- Slots -->
+                </table>
+            </td>
+            <td class = "rCol">
+                <table>
+                    <tr>
+                        <td class="rightCol">
+                            <table>
+                                <!-- Winning Column Title Banner -->
+                                <tr align="center">
+                                    <td colspan="3" align="center">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <h2 class="text">Winning Combinations & Payouts</h2>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- 3 of a kind combos -->
+                                <tr align="center">
+                                    <td class="left"><label class="text">3 of a kind - </label></td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><img height="125" width="75" src="Images/Quantum.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Quantum.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Quantum.jpg"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="right"><label class="text"> - 10x your bet!</label></td>
+                                </tr>
+                                <tr align="center">
+                                    <td class="left"><label class="text">3 of a kind - </label></td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><img height="125" width="75" src="Images/Victory.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Victory.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Victory.jpg"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="right"><label class="text"> - 10x your bet!</label></td>
+                                </tr>
+                                <tr align="center">
+                                    <td class="left"><label class="text">3 of a kind - </label></td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><img height="125" width="75" src="Images/Cola.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Cola.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Cola.jpg"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="right"><label class="text"> - 10x your bet!</label></td>
+                                </tr>
+                                <!-- Pairs -->
+                                <tr align="center">
+                                    <td class="left"><label class="text">A pair - </label></td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><img height="125" width="75" src="Images/Vault.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Pinup.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Pinup.jpg"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <label class="text"> - 2x your bet!</label>
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td class="left"><label class="text">Or - </label></td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><img height="125" width="75" src="Images/Pinup.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Vault.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Pinup.jpg"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <label class="text"> - 2x your bet!</label>
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td class="left"><label class="text">Or - </label></td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><img height="125" width="75" src="Images/Pinup.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Pinup.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Vault.jpg"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><label class="text"> - 2x your bet!</label></td>
+                                </tr>
+                                <!-- No Match -->
+                                <tr align="center">
+                                    <td class="left"><label class="text">No Match - </label></td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><img height="125" width="75" src="Images/Quantum.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Victory.jpg"></td>
+                                                <td><img height="125" width="75" src="Images/Cola.jpg"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="right"><label class="text"> - You Lose!</label></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    var slotitem = ["0", "Images/Pinup", "Images/Quantum","Images/Victory","Images/Cola"];
+    document.slots.bet.focus();
+    startgold = 25;
+    document.slots.gold.value = startgold;
+    function result (){
+        if (document.slots.gold.value < startgold)
+        {alert("You lost " + (startgold - document.slots.gold.value) + " chips.");}
+        else {alert("You gained "+ (document.slots.gold.value - startgold) + " chips.");}}
+
+    function requirements(){
+        //1. replace document.slots.bet with a variable.
+        //2. Set variable equal to zero if document.slot.bet is not a number,  isNaN
+        var number = document.slots.bet.value;
+        try {
+            if (isNaN(number)) {alert("please enter a valid number"); return false;}
+            if (number <1 || document.slots.bet.value == "") {alert("You cannot bet less than 1."); return;}
+            if (Math.floor(document.slots.gold.value) < Math.floor(document.slots.bet.value)) {alert("Your bet " + document.slots.bet.value + " is larger than your remaining chip(s) " + document.slots.gold.value + ".  "); return;}
+            if ((document.slots.bet.value>1)) {document.slots.banner.value="Bet is " + document.slots.bet.value + " chip(s)";}
+            else {((document.slots.banner.value = "Bet is " + document.slots.bet.value + " chip(s)"));}
+            counter=0;
+            spin();}
+        catch(err) {message.innerHTML = "input is" +err;}}
+
+    //spins the slots and randomly chooses from 3 pictures
+    function spin(){
+        var turns1=10+Math.floor((Math.random() * 4)+1);
+        for (a=0;a<turns1;a++)
+        {document.slots.slot1.src = "" + slotitem[a % 9] + ".jpg"; }
+        var turns2=10+Math.floor((Math.random() * 4)+1);
+        for (b=0;b<turns2;b++)
+        {document.slots.slot2.src = "" + slotitem[b % 9] + ".jpg"; }
+        var turns3=10+Math.floor((Math.random() * 4)+1);
+        for (c=0;c<turns3;c++)
+        {document.slots.slot3.src = "" + slotitem[c % 9] + ".jpg"; }
+        counter++;
+        if (counter<25) {setTimeout("spin(counter);",50);} else {checkmatch();}}
+
+    function checkmatch(){
+        if ((document.slots.slot1.src == document.slots.slot2.src) && (document.slots.slot1.src == document.slots.slot3.src))
+        {document.slots.banner.value = "3 of a kind - You won " + Math.floor(document.slots.bet.value*10) + " chips";
+            document.slots.gold.value = Math.floor(document.slots.gold.value)+Math.floor(document.slots.bet.value*10); }
+        else if ((document.slots.slot1.src == document.slots.slot2.src) || (document.slots.slot1.src == document.slots.slot3.src) || (document.slots.slot2.src == document.slots.slot3.src))
+        {document.slots.banner.value = "A pair - You won " + Math.floor(document.slots.bet.value*2) + " chip(s)";
+            document.slots.gold.value = Math.floor(document.slots.bet.value*2) + Math.floor(document.slots.gold.value);}
+        else {document.slots.gold.value = document.slots.gold.value-document.slots.bet.value;
+            document.slots.banner.value = "No match - You lost " + document.slots.bet.value + " chip(s)";}}
+
+    function refresh(){location.reload();}
+</script>
+</body>
+</html>
